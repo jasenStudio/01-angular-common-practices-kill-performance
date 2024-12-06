@@ -1,0 +1,37 @@
+<h1 class="text-3xl my-5 font-bold">Ignoring Memory Leaks</h1>
+<p>
+  Memory leaks occur when Angular components or services are not properly
+  destroyed. This can happen if you leave subscriptions active or DOM elements
+  are not cleaned up properly.
+</p>
+<br />
+
+<h3 class="font-bold">Problem:</h3>
+<br />
+<p>
+  Memory leaks lead to increased memory consumption and eventually crash the
+  application.
+</p>
+
+<br />
+
+<h3 class="font-bold">Solution:</h3>
+<br />
+<p>
+  Always unsubscribe from Observables in ngOnDestroy() or use the async pipe.
+</p>
+<br />
+<span>Pipe Async</span>
+<pre class="text-[12px]">{{ codeSnippet }}</pre>
+<br />
+<span>NgDestroy</span>
+<pre class="text-[12px]">
+ngOnDestroy() {{ "{" }}   this.subscription.unsubscribe(); {{ "}" }}</pre
+>
+<br />
+<span>TrackBy</span>
+<pre class="text-[12px]">
+
+  {{ codeSnippet2 }}
+</pre>
+<br />

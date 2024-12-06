@@ -1,0 +1,32 @@
+<h1 class="text-3xl font-bold my-2">Unoptimized Third-Party Libraries</h1>
+<br />
+<p>
+  Third-party libraries are widely used to extend functionality. However, not
+  all libraries are optimized for performance, and using them carelessly can
+  lead to bundle bloat and sluggish app behavior.
+</p>
+<br />
+<h3>Problem:</h3>
+<br />
+<p>
+  Some libraries load unnecessary code, increasing the JavaScript bundle size,
+  which impacts initial load times and memory usage.
+</p>
+<br />
+<h3>Solution:</h3>
+<br />
+<p>
+  Only import what you need from libraries. Use tree-shakable imports to
+  eliminate unused code.
+</p>
+<br />
+<pre style="font-size: 11px">
+ import {{ "{" }}  specificFunction  {{ "}" }}from 'heavy-library';</pre
+>
+
+<br />
+
+<p>
+  Regularly audit your dependencies and remove unused libraries using tools like
+  Webpack Bundle Analyzer.
+</p>

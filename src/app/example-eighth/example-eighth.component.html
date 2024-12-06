@@ -1,0 +1,26 @@
+<h1 class="text-3xl my-5 font-bold">Inefficient Template Rendering</h1>
+<p>
+  Angular’s templating engine is fast, but inefficient rendering practices can
+  cause performance bottlenecks. For instance, using expensive methods inside a
+  template expression can slow down rendering.
+</p>
+<br />
+
+<h3 class="font-bold">Problem:</h3>
+<br />
+<p>
+  Avoid calling methods inside templates. Instead, calculate values outside the
+  template and assign them to variables.
+</p>
+
+<br />
+
+<h3 class="font-bold">Solution:</h3>
+<br />
+<p>
+  Always unsubscribe from Observables in ngOnDestroy() or use the async pipe.
+</p>
+<br />
+<pre class="text-[12px]">
+  {{ codeSnippet }}
+</pre>

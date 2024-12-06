@@ -1,0 +1,25 @@
+<h1 class="text-3xl my-5 font-bold">Not Optimizing for Production</h1>
+<p>
+  Running Angular apps in development mode during production can have
+  significant performance implications because Angular performs extra checks and
+  logs in development mode.
+</p>
+<br />
+
+<h3 class="font-bold">Problem:</h3>
+<br />
+<p>
+  Running in development mode increases load times and degrades performance.
+</p>
+
+<br />
+
+<h3 class="font-bold">Solution:</h3>
+<br />
+<p>
+  Always build your app using the production flag to enable optimizations such
+  as AOT (Ahead-Of-Time) compilation and minification.
+</p>
+<br />
+<p>{{ codeSnippet }}</p>
+<br />

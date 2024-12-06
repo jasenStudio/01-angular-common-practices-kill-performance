@@ -1,0 +1,45 @@
+<h1 class="text-3xl font-bold my-2">Inefficient Change Detection</h1>
+
+<br />
+
+<p>
+  Inefficient Change Detection Angular uses a change detection mechanism to
+  track data changes and update the view accordingly. By default, Angular’s
+  change detection runs on every browser event, such as clicks, HTTP requests,
+  and even setTimeout functions. This mechanism can be costly if not optimized.
+</p>
+
+<br />
+
+<h2>Solution:</h2>
+
+<br />
+<p>
+  Solution: Use OnPush change detection strategy where possible. This tells
+  Angular to only run change detection when the input properties of a component
+  change.
+</p>
+
+<br />
+<pre>
+  {{ "{" }} Component
+  ({{ "{" }} selector: 'app-example',
+  changeDetection:
+ ChangeDetectionStrategy.OnPush {{ "}" }}) {{ "}" }}
+</pre>
+<br />
+<h3>commonModule</h3>
+
+<div *ngFor="let item of users$ | async">
+  {{ item.name }}
+</div>
+
+<br />
+
+<h3>Control flow</h3>
+
+@if( users$|async; as users) { @for( user of users; track user.id){
+<div>
+  {{ user.name }}
+</div>
+} }

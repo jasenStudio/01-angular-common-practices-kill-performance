@@ -1,0 +1,33 @@
+<h1 class="text-3xl my-5 font-bold">Excessive Use of Watchers</h1>
+<p>
+  Angular’s two-way data binding can result in numerous watchers being created
+  to monitor changes. This can cause significant performance bottlenecks if not
+  handled carefully, especially in large applications.
+</p>
+<br />
+
+<h3 class="font-bold">Problem:</h3>
+<br />
+<p>
+  Too many watchers slow down change detection, as Angular has to evaluate every
+  watcher during each cycle.
+</p>
+
+<br />
+
+<h3 class="font-bold">Solution:</h3>
+<br />
+<p>{{ codeSnippet }}</p>
+<br />
+<p>
+  Avoid creating watchers in complex, nested templates. Reduce binding where
+  unnecessary or use detached change detection for specific components.
+</p>
+<br />
+<span> It is a sample </span>
+<br />
+<pre class="text-[12px]">
+
+  {{ codeSnippet2 }}
+</pre>
+<br />

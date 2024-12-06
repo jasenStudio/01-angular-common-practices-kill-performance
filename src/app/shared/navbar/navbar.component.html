@@ -1,0 +1,19 @@
+<header class="w-full">
+  <nav>
+    <!-- <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul> -->
+    <ul>
+      @for(ruta of rutas ; track ruta.path){
+      <li>
+        <a [routerLink]="['/' + ruta.path]" routerLinkActive="active">{{
+          ruta.path
+        }}</a>
+      </li>
+      }
+    </ul>
+  </nav>
+</header>

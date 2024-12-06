@@ -1,0 +1,28 @@
+<h1 class="text-3xl my-5 font-bold">
+  Neglecting Ahead-Of-Time (AOT) Compilation
+</h1>
+<p>
+  Using Just-In-Time (JIT) compilation in Angular results in slower application
+  performance since it compiles the app in the browser. AOT pre-compiles the app
+  during the build process, reducing the work that needs to be done at runtime.
+</p>
+<br />
+
+<h3 class="font-bold">Problem:</h3>
+<br />
+<p>
+  JIT compilation increases bundle sizes and makes the app slower to load and
+  execute.
+</p>
+
+<br />
+
+<h3 class="font-bold">Solution:</h3>
+<br />
+<p>
+  Use AOT compilation to reduce bundle size and improve performance. This can be
+  enabled using the — aot flag when building the application.
+</p>
+<br />
+<pre>ng build --prod --aot</pre>
+<br />
